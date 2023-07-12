@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'PPNeue';
+  src: url(./PPNeue.eot);
+  src: url(./PPNeue.eot?#iefix) format('embedded-opentype'),
+       url(./PPNeue.otf) format('otf'),
+       url(./PPNeue.svg#PPNeue) format('svg'),
+       url(./PPNeue.ttf) format('truetype'),
+       url(./PPNeue.woff2) format('woff2'),
+       url(./PPNeue.woff) format('woff');
+}

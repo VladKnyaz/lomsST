@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'PPMori';
+  src: url(./PPMori.eot);
+  src: url(./PPMori.eot?#iefix) format('embedded-opentype'),
+       url(./PPMori.ttf) format('truetype'),
+       url(./PPMori.svg#PPMori) format('svg'),
+       url(./PPMori.otf) format('otf'),
+       url(./PPMori.woff2) format('woff2'),
+       url(./PPMori.woff) format('woff');
+}

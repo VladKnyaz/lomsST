@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'PPMori';
+    font-style: italic;
+    src: url(./PPMori.eot);
+    src: url(./PPMori.eot?#iefix) format('embedded-opentype'), url(./PPMori.otf) format('otf'),
+        url(./PPMori.ttf) format('truetype'), url(./PPMori.svg#PPMori) format('svg'),
+        url(./PPMori.woff) format('woff'), url(./PPMori.woff2) format('woff2');
+}

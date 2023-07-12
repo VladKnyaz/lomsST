@@ -1,0 +1,107 @@
+@import url(../fonts/fonts.css);
+
+body {
+    box-sizing: border-box;
+    font-family: 'PPNeue', 'Open Sans';
+    font-weight: 400;
+    background: #0a0a0a;
+    color: #7a7a7a;
+    overflow-x: hidden;
+}
+
+ul {
+    flex-wrap: wrap;
+}
+
+p,
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #e4e4e4;
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+button {
+    white-space: nowrap;
+    transition: 0.2s;
+    border: none;
+}
+
+a {
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.65em 1.7em;
+    background: #e4e4e4;
+    border-radius: 179px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.button:hover {
+    transform: scale(1.03);
+}
+
+.button--primary {
+    background: #de4c5e;
+    color: #f4f4f4;
+    gap: 15px;
+}
+
+.button--secondory {
+    background: #252525;
+    color: #949393;
+}
+
+.button--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: #252525;
+    padding: 15px 33px;
+    border-radius: 50px;
+    font-size: 28px;
+    line-height: 34px;
+    color: #fff;
+}
+
+.button--link:hover {
+    background: #de4c5e;
+}
+
+.button--link:active {
+    background: #bd3948;
+}
+
+.button--next {
+    background-image: url('../assets/icons/arrow__carousel.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.button--next:hover {
+    background-color: #fff;
+    background-image: url('../assets/icons/arrow__carousel-red.svg');
+}
+
+body .hide {
+    display: none;
+}

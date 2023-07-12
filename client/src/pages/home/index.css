@@ -1,0 +1,257 @@
+/* MAIN */
+
+.main {
+    margin-top: 6.1rem;
+}
+
+.start__section__title {
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 95px;
+    color: #f4f4f4;
+}
+
+.start__section__text {
+    font-size: 25px;
+    line-height: 30px;
+    color: #7a7a7a;
+    max-width: 528px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.start__section {
+    position: relative;
+    border-bottom: 1px solid #4d4d4d;
+}
+
+.start__section .container:before {
+    position: absolute;
+    content: '';
+    top: calc(5px + 20%);
+    z-index: -999;
+    width: 189px;
+    height: 209px;
+    background: #de4c5e;
+    filter: blur(161px);
+}
+
+.start__section__buttons {
+    display: flex;
+    gap: 30px;
+}
+
+/* --------------------------- */
+
+.advantages__section {
+    margin-top: 165px;
+}
+
+.advantages__section__text {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: right;
+}
+
+.advantages__section__title {
+    font-size: 55px;
+    line-height: 58px;
+    text-align: right;
+    color: #f4f4f4;
+    margin-right: auto;
+}
+
+.decor__line {
+    display: block;
+    width: 100px;
+    height: 6px;
+    background: #f4f4f4;
+    margin-left: 3.25rem;
+}
+
+/* --------------------------- */
+
+.ushelp__section {
+    margin-top: 9rem;
+}
+
+.ushelp__section__title {
+    font-size: 80px;
+    line-height: 95px;
+    color: #e4e4e4;
+    mix-blend-mode: normal;
+}
+
+.ushelp__section__text {
+    margin-top: 20px;
+    margin-bottom: 45px;
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 529px;
+}
+
+.ushelp__section__buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.helpus__img {
+    position: relative;
+    display: block;
+}
+
+.helpus__img img {
+    position: absolute;
+    left: -98px;
+    top: -42px;
+}
+
+.helpus__img::before {
+    margin: auto;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+    z-index: -654;
+    content: '';
+    width: 250px;
+    height: 250px;
+    background: #de4c5e;
+    filter: blur(161px);
+}
+
+/* --------------------------- */
+
+.findus__section {
+    margin-top: 11rem;
+}
+
+.findus__container {
+    padding: 10px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    background: rgba(22, 22, 22, 0.8);
+    backdrop-filter: blur(6.5px);
+    border-radius: 20px;
+}
+
+.findus__container:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    background: url(../../assets/images/perstiger.svg);
+    background-repeat: no-repeat;
+    width: 282px;
+    height: 324px;
+    z-index: -5;
+}
+
+.findus__container:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    display: block;
+    background: url(../../assets/icons/bookmark.svg);
+    background-repeat: no-repeat;
+    width: 282px;
+    height: 324px;
+    z-index: -5;
+}
+
+.findus__decor {
+    z-index: -969;
+    width: 99px;
+    height: 199px;
+    background: #de4c5e;
+    filter: blur(161px);
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+}
+
+.findus__section__title {
+    margin-top: 4.3rem;
+    font-size: 55px;
+    line-height: 58px;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.findus__section__text {
+    margin-top: 1.25rem;
+    max-width: 640px;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.findus__section__social {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* --------------------------- */
+
+.partners__section {
+    margin-top: 9rem;
+}
+
+.partner__section__title {
+    font-size: 55px;
+    line-height: 58px;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.patners__section__images {
+    margin-top: 3.2rem;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+@media (max-width: 1199px) {
+    .findus__container:after {
+        transform: scale(0.8);
+        top: -31px;
+        right: -50px;
+        display: none;
+    }
+
+    .advantages__section__title {
+        font-size: 40px;
+    }
+
+    .findus__container:before {
+        display: none;
+        transform: scale(0.8);
+        bottom: -31px;
+        left: -27px;
+    }
+
+    .helpus__img img {
+        position: absolute;
+        left: -240px;
+    }
+    .helpus__img::before {
+        left: -135px;
+    }
+
+    .start__img {
+        position: relative;
+    }
+
+    .start__img img {
+        position: absolute;
+        left: -114px;
+        transform: scale(0.9);
+        bottom: -19px;
+        display: none;
+    }
+}
