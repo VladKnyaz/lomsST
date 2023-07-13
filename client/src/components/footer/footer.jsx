@@ -52,7 +52,7 @@ function Footer() {
                             </ul>
                         </nav>
                         <div className="footer__rightsReserved">
-                            {`© 2022 - ${new Date().getFullYear()} All rights reserved by LOMS STUDIO.`}
+                            {`© 2022 - ${new Date().getFullYear()} All rights reserved by LOMS Studio.`}
                         </div>
                     </div>
                     <div className="col footer__img">
