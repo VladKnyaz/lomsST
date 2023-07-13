@@ -85,13 +85,13 @@ function Header({ isActiveBurger, setIsActiveBurger }) {
                     </ul>
                 </nav>
                 <div className="header__buttons">
-                    <button className="search__button header__button">
+                    {/* <button className="search__button header__button">
                         <SvgSelector name="search" />
                     </button>
                     <button className="lang__button header__button">
                         <img src={langico} alt="" />
                         <span>En</span>
-                    </button>
+                    </button> */}
                     <a href="/" className="start__button button--primary button">
                         Start with us <img src={arrowico} alt="" />
                     </a>

@@ -1,0 +1,258 @@
+.gamePage {
+    margin-top: 5rem
+}
+:root{
+	--primary-btn-color: #DE4C5E;
+	--secondary-btn-color: #252525;
+}
+
+ol, ul {
+	list-style: none;
+}
+/* buttons start */
+.primary-button{
+	display: inline-block;
+	padding: 15px 47px;
+	border-radius: 179px;
+	background-color: var(--primary-btn-color);
+	color: #F4F4F4;
+    font-family: 'PPNeue', 'Open Sans';
+
+	font-size: 22px;
+	font-weight: 400;
+}
+
+.secondary-button{
+	display: inline-block;
+	padding: 15px 40px;
+	border-radius: 179px;
+	background-color: var(--secondary-btn-color);
+	color: #949393;
+    font-family: 'PPNeue', 'Open Sans';
+
+	font-size: 22px;
+	font-weight: 400;
+}
+/* buttons end */
+
+/* titles start */
+.def-title{
+	color: #FFF;
+    font-family: 'PPNeue', 'Open Sans';
+	font-size: 65px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+/* titles end */
+
+
+/* search start */
+.search-row {
+	max-width: 1146px;
+	margin: 0 auto;
+	padding: 43px 0 75px;
+}
+
+.search-row__input {
+	width: 100%;
+	padding: 19px 19px 24px 47px;
+	background-color: transparent;
+	border-radius: 53px;
+	border: 1.5px solid #797979;
+	color: #535353;
+    font-family: 'PPNeue', 'Open Sans';
+
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	outline: none;
+	background-image: url(./img/search.svg);
+	background-size: 32px;
+	background-repeat: no-repeat;
+	background-position: center right 39px;
+}
+/* search end */
+
+/* hero start */
+.hero {
+	margin: 0 auto;
+	
+    max-width: 1096px;
+}
+
+.hero-wrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 115px;
+}
+
+.hero__image img{
+	border-radius: 20px;
+	width: 446px;
+	height: 535px;
+}
+
+.hero__info {
+	padding-top: 23px;
+	max-width: 558px;
+}
+
+.hero__info-title {
+	margin-bottom: 20px;
+	color: #F4F4F4;
+    font-family: 'PPNeue', 'Open Sans';
+
+	font-size: 45px;
+	line-height: normal;
+}
+
+.hero__info-description {
+	margin-bottom: 20px;
+	color: #7A7A7A;
+    font-family: 'PPNeue', 'Open Sans';
+
+	font-size: 24px;
+	line-height: normal;
+}
+
+.hero__download-list {
+	display: flex;
+	margin-bottom: 43px;
+	align-items: center;
+	column-gap: 25px;
+    padding: 0; 
+}
+
+.hero__buttons {
+	display: flex;
+	column-gap: 30px;
+}
+/* hero end */
+
+/* other start */
+
+.other {
+	padding-bottom: 86px;
+}
+
+.slider__title {
+	margin-bottom: 50px;
+	color: #E4E4E4;
+	font-weight: 400;
+}
+
+.slider {
+	position: relative;
+}
+
+.slider-wrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 30px;
+}
+
+.slider__item {
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+
+.slider__item-name {
+	position: absolute;
+	bottom: 18px;
+	left: 19px;
+	color: #E4E4E4;
+    font-family: 'PPNeue', 'Open Sans';
+	font-size: 31px;
+	font-weight: 400;
+}
+
+.slider__button-next,
+.slider__button-prev {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 69px;
+	height: 69px;
+	border-radius: 100%;
+	border: 1px solid #222;
+}
+
+.slider__button-next::after,
+.slider__button-prev::after{
+	content: '';
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	transform: translate(-50%,-50%);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+
+
+/* other end */
+
+/* footer start */
+
+
+.footer .container{
+	padding: 0 83px;
+}
+
+.footer__title {
+	margin-bottom: 20px;
+    font-family: 'PPNeue', 'Open Sans';
+	font-size: 65px;
+}
+
+.footer__decription {
+	max-width: 565px;
+	margin-bottom: 43px;
+	color: #7A7A7A;
+    font-family: 'PPNeue', 'Open Sans';
+	font-size: 21px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.footer__menu{
+	padding-bottom: 61px;
+}
+
+.footer__menu-list {
+	display: flex;
+}
+
+.footer__menu-list-item {
+	margin-left: 45px;
+}
+
+.footer__menu-list-item:first-child{
+	margin-left: 0;
+}
+
+.footer__menu-link {
+	color: #E4E4E4;
+    font-family: 'PPNeue', 'Open Sans';
+	font-size: 18px;
+	line-height: 2;
+}
+
+.foooter__copyright{
+	padding-bottom: 26px;
+	color: #7A7A7A;
+    font-family: 'PPNeue', 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+/* footer end*/

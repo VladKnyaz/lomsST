@@ -13,13 +13,14 @@ import tiktokIco from '../../assets/icons/tiktok.svg';
 import instIco from '../../assets/icons/instagram.svg';
 import youtubeIco from '../../assets/icons/youtube.svg';
 
-import Gallery from './components/gallery/index';
-import News from './components/newsCarousel/index';
+// import Gallery from './components/gallery/index';
+// import News from './components/newsCarousel/index';
 import Subscribe from './components/subscribe/index';
 // lang set
 import words from './../../services/langService';
 
 function Home({ isActiveBurger }) {
+    document.title = "LOMS Studio - Game Developer"
     return (
         <main className="main">
             <section className="start__section">
@@ -68,7 +69,7 @@ function Home({ isActiveBurger }) {
                     </div>
                 </div>
             </section>
-            <Gallery />
+            {/* <Gallery /> */}
             <section className="ushelp__section">
                 <div className="container">
                     <div className="row">

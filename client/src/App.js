@@ -14,7 +14,8 @@ import Error404 from './pages/404';
 
 import AdminPanel from './pages/admin/index';
 import { CreateGame, DeleteGame } from './pages/admin/components/game';
-import GamePage from './pages/gamePage';
+import GameValand from './pages/gameValand';
+import GameRomanConquest from './pages/gameRomanConquest';
 
 function App() {
     let lang = localStorage.getItem('lang');
@@ -37,7 +38,8 @@ function App() {
                 />
                 <Route path="/privacy-policy" element={<Terms />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/game/:id" element={<GamePage />} />
+                <Route path="/valand" element={<GameValand />} />
+                <Route path="/roman-conquest" element={<GameRomanConquest />} />
                 <Route path="/admin/*" element={<AdminPanel />}>
                     <Route path="createGame" element={<CreateGame />} />
                     <Route path="deleteGame" element={<DeleteGame />} />
