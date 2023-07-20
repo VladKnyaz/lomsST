@@ -59,3 +59,12 @@
 }
 
 /* EXIT FOOTER */
+
+@media(max-width: 989px) {
+    .footer__menu {
+        gap:16px;
+    }   
+    .footer__text {
+        max-width: 95%;
+    }
+}

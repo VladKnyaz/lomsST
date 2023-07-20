@@ -1,5 +1,9 @@
 @import url(../fonts/fonts.css);
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     box-sizing: border-box;
     font-family: 'PPNeue', 'Open Sans';

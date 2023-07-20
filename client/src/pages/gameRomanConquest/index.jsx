@@ -16,21 +16,21 @@ function GameRomanConquest() {
     return (
         <div className="gamePage">
             <div className="container gamePage__container">
-            <section class="hero">
-                <div class="hero-wrapper">
-                    <div class="hero__image">
+            <section className="hero">
+                <div className="hero-wrapper">
+                    <div className="hero__image">
                         <img src={romanImg} alt="Roman Conquest"/>
                     </div>
-                    <div class="hero__info">
-                        <h3 class="hero__info-title">Roman Conquest: <br /> Rise to Power</h3>
-                        <p class="hero__info-description">
+                    <div className="hero__info">
+                        <h3 className="hero__info-title">Roman Conquest: <br /> Rise to Power</h3>
+                        <p className="hero__info-description">
                             Roman Conquest: Rise to Power is a turn-based strategy game in which the player can feel like a great commander of the Roman Empire, join and lead a legion, and with his army to reclaim the occupied lands.
                         </p>
 
-                        <div class="hero__download">
-                            <ul class="hero__download-list">
+                        <div className="hero__download">
+                            <ul className="hero__download-list">
                                
-                                <li class="hero__download-list-item">
+                                <li className="hero__download-list-item">
                                     <a href="#">
                                         <img src={steamImg} alt="Steam"/>
                                     </a>
@@ -38,9 +38,9 @@ function GameRomanConquest() {
                                
                             </ul>
                         </div>
-                        <div class="hero__buttons">
-                            <a href="#" class="hero__buttons-buy primary-button">Buy</a>
-                            <a href="#" class="hero__buttons-share secondary-button">Share a link</a>
+                        <div className="hero__buttons">
+                            <a href="#" className="hero__buttons-buy primary-button">Buy</a>
+                            <a href="#" className="hero__buttons-share secondary-button">Share a link</a>
                         </div>
                     </div>
                 </div>
