@@ -217,11 +217,22 @@
 }
 
 @media (max-width: 1199px) {
+
+    .button {
+        padding: .65em 1.4em;
+    }
+
+
     .findus__container:after {
         transform: scale(0.8);
         top: -31px;
         right: -50px;
         display: none;
+    }
+
+    .start__section__title {
+        font-weight: 600;
+        line-height: 69px;
     }
 
     .advantages__section__title {
