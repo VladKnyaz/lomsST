@@ -230,8 +230,12 @@
         display: none;
     }
 
+    .ushelp__section__button.button--secondory {
+        font-size: 18px;
+    }
+
     .start__section__title {
-        font-weight: 600;
+        font-size: 70px;
         line-height: 69px;
     }
 
