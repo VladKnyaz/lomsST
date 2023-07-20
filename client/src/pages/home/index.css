@@ -222,6 +222,9 @@
         padding: .65em 1.4em;
     }
 
+    .findus__container {
+        max-width: 95%;
+    }
 
     .findus__container:after {
         transform: scale(0.8);
