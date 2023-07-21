@@ -29,7 +29,7 @@ function Header({ isActiveBurger, setIsActiveBurger }) {
                             </Link>
                         </li>
                         <li className="menu__item">
-                            <Link to="/" className="menu__link">
+                            <Link to="/games" className="menu__link">
                                 Games
                             </Link>
                         </li>
@@ -64,7 +64,7 @@ function Header({ isActiveBurger, setIsActiveBurger }) {
                         <Link to="/" className="menu__link--mobile menu__item--mobile">
                             News
                         </Link>
-                        <Link to="/" className="menu__link--mobile menu__item--mobile">
+                        <Link to="/games" className="menu__link--mobile menu__item--mobile">
                             Games
                         </Link>
                         <Link to="/" className="menu__link--mobile menu__item--mobile">
