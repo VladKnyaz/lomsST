@@ -190,3 +190,10 @@
 
 }
 
+@media (max-width: 989px) {
+	.slider-wrapper {
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center;
+	}
+}

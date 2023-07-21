@@ -18,40 +18,40 @@ function GameValand() {
     return (
         <div className="gamePage">
             <div className="container gamePage__container">
-            <section class="hero">
-                <div class="hero-wrapper">
-                    <div class="hero__image">
+            <section className="hero">
+                <div className="hero-wrapper">
+                    <div className="hero__image">
                         <img src={valandImg} alt="Valand"/>
                     </div>
-                    <div class="hero__info">
-                        <h3 class="hero__info-title">Valand</h3>
-                        <p class="hero__info-description">
+                    <div className="hero__info">
+                        <h3 className="hero__info-title">Valand</h3>
+                        <p className="hero__info-description">
                             Valand is a Viking Age city builder. With your own strength you have to rebuild the whole
                             settlement and bring it to prosperity.
                         </p>
 
-                        <div class="hero__download">
-                            <ul class="hero__download-list">
-                                <li class="hero__download-list-item">
+                        <div className="hero__download">
+                            <ul className="hero__download-list">
+                                <li className="hero__download-list-item">
                                     <a href="#">
                                         <img src={appstoreImg} alt="AppStore"/>
                                     </a>
                                 </li>
-                                <li class="hero__download-list-item">
+                                <li className="hero__download-list-item">
                                     <a href="#">
                                         <img src={steamImg} alt="Steam"/>
                                     </a>
                                 </li>
-                                <li class="hero__download-list-item">
+                                <li className="hero__download-list-item">
                                     <a href="#"
                                     ><img src={googlePlayImg} alt="GooglePlay"/>
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="hero__buttons">
-                            <a href="#" class="hero__buttons-buy primary-button">Buy</a>
-                            <a href="#" class="hero__buttons-share secondary-button">Share a link</a>
+                        <div className="hero__buttons">
+                            <a href="#" className="hero__buttons-buy primary-button">Buy</a>
+                            <a href="#" className="hero__buttons-share secondary-button">Share a link</a>
                         </div>
                     </div>
                 </div>
