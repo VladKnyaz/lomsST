@@ -147,8 +147,9 @@
 
 .studio {
 	margin: 0 auto;
-	padding-bottom: 102px;
+	padding-bottom: 2rem;
 	text-align: center;
+	margin-top: 3rem;
 }
 
 .studio__image {
@@ -191,9 +192,23 @@
 }
 
 @media (max-width: 989px) {
-	.slider-wrapper {
+	.games__container .slider__button {
+		display: none;
+	}
+	.slider-wrapper { 
 		flex-wrap: wrap;
 		gap: 20px;
 		justify-content: center;
+	}
+	.studio__buttons .hero__buttons-share {
+		max-width: 185px;
+	}
+	.studio__buttons .primary-button {
+		max-width: 193px;
+	}
+	.studio__buttons {
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
 	}
 }

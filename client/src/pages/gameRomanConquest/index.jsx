@@ -7,6 +7,8 @@ import './index.css';
 
 import romanImg from './img/roman.svg';
 import steamImg from './img/steam.png';
+import { LinkService } from '../../services/link.service';
+import { toast } from 'react-toastify';
 
 
 function GameRomanConquest() {
@@ -40,7 +42,10 @@ function GameRomanConquest() {
                         </div>
                         <div className="hero__buttons">
                             <a href="#" className="hero__buttons-buy primary-button">Buy</a>
-                            <a href="#" className="hero__buttons-share secondary-button">Share a link</a>
+                            <button className="hero__buttons-share secondary-button" onClick={()=>{
+                                LinkService.copyLink();
+                                toast.success("Copied")
+                            }}>Share a link</button> 
                         </div>
                     </div>
                 </div>

@@ -36,6 +36,7 @@ button {
     white-space: nowrap;
     transition: 0.2s;
     border: none;
+    cursor: pointer;
 }
 
 a {
@@ -106,6 +107,11 @@ a {
     background-image: url('../assets/icons/arrow__carousel-red.svg');
 }
 
+
+
+
+
 body .hide {
     display: none;
 }
+

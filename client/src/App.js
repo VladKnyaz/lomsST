@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 
 import './styles/App.css';
 import './styles/bootstrap-grid.min.css';
 import './styles/normalize.css';
-
 import Home from './pages/home/';
 import Login from './pages/login/';
 import Header from './components/header/header';
@@ -17,15 +17,20 @@ import { CreateGame, DeleteGame } from './pages/admin/components/game';
 import GameValand from './pages/gameValand';
 import GameRomanConquest from './pages/gameRomanConquest';
 import Games from './pages/games/index';
+import "react-toastify/dist/ReactToastify.css";
+import Contacts from './pages/contacts';
 
 function App() {
     let lang = localStorage.getItem('lang');
     if (!lang) localStorage.setItem('lang', 'en');
 
     const [isActiveBurger, setIsActiveBurger] = useState(false);
-
+   
     return (
+        <>
+
         <div className="wrapper">
+
             <Header isActiveBurger={isActiveBurger} setIsActiveBurger={setIsActiveBurger} />
             <Routes>
                 <Route
@@ -41,6 +46,7 @@ function App() {
                 <Route path="/games" element={<Games />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/valand" element={<GameValand />} />
+                <Route path="/contacts" element={<Contacts />} />
                 <Route path="/roman-conquest" element={<GameRomanConquest />} />
                 <Route path="/admin/*" element={<AdminPanel />}>
                     <Route path="createGame" element={<CreateGame />} />
@@ -51,6 +57,9 @@ function App() {
 
             <Footer />
         </div>
+        <ToastContainer theme='dark' progressStyle={{background: "var(--primary-btn-color)"}} autoClose={2000} limit={4}/>
+
+        </>
     );
 }
 

@@ -273,3 +273,105 @@
         display: none;
     }
 }
+
+@media (max-width: 989px) {
+    .advantages__section-row {
+        flex-direction: column-reverse;
+    }
+
+    .advantages__section__title, .ushelp__section__title, .subscribe__section__title {
+        font-size: 25px;
+        line-height: 26px;
+    }
+
+    .advantages__section__text, .subscribe__section__text {
+        font-size: 16px;
+        line-height: 19px;
+        max-width: 330px;
+        margin-top: 1rem;
+    }
+    .decor__line {
+        height: 3px;
+        width: 80px;
+    }
+
+    /* .findus__section__text {
+        font-size: 16px;
+    } */
+    
+    /* .button--link {
+        font-size: 10px;
+    } */
+
+    .subscribe__section {
+        transform: scale(0.9);
+    }
+
+    .patners__section__images img {
+        max-width: 100px;
+    }
+
+    .patners__section__images {
+        gap: 10px;
+    }
+
+    .footer .footer__title {
+        font-size: 25px;
+        line-height: normal;
+
+    }
+
+    .footer__text {
+        font-size: 16px;    
+    }
+}
+
+@media (max-width: 789px) {
+    .ushelp__section__buttons {
+        flex-direction: column;
+    }
+
+    .ushelp__col {
+        padding: 0 3.8rem;
+
+    }
+
+    .ushelp__section__buttons .button--secondory {
+        font-size: 22px;
+    }
+
+    .helpus__img {
+        transform: scale(0.6);
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .helpus__img img {
+        position: static;
+    }
+
+    .helpus__row {
+        flex-direction: row !important;
+    }
+    .helpus__img::before {
+        left: 60px;
+    }
+
+    .subscribe__section .subscribe__section__img img{
+        display: block;
+        position: static;
+    }
+
+    .subscribe__section .subscribe__section__img{
+        transform: scale(0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+    }
+    .main .subscribe__section, .ushelp__section {
+        margin-top: 0;
+    }
+}

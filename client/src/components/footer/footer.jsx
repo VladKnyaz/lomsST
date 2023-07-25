@@ -25,7 +25,7 @@ function Footer() {
                                     </Link>
                                 </li>
                                 <li className="footer__menu__item">
-                                    <Link to="/" className="menu__link">
+                                    <Link to="/games" className="menu__link">
                                         Games
                                     </Link>
                                 </li>
@@ -40,7 +40,7 @@ function Footer() {
                                     </Link>
                                 </li>
                                 <li className="footer__menu__item">
-                                    <Link to="/" className="menu__link">
+                                    <Link to="/contacts" className="menu__link">
                                         Contacts
                                     </Link>
                                 </li>

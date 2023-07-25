@@ -9,6 +9,8 @@ import fakeImg from "./img/slider-image.jpg";
 import romanImg from "./img/roman.svg";
 import valandImg from "./img/valand.jpg";
 import lomsImg from "./img/loms-studio.png";
+import { LinkService } from '../../services/link.service';
+import { toast } from 'react-toastify';
 
 function Games() {
    
@@ -19,18 +21,21 @@ function Games() {
             <div className="container games__container">
             <main>
             <div className="container">
-            {/* <section className="studio">
+            <section className="studio">
                 <img className="studio__image" src={lomsImg} alt="Loms studio"/>
-                <h1 className="studio__title def-title">Loms Studio</h1>
+                <h1 className="studio__title def-title">LOMS Studio</h1>
                 <p className="studio__description">
-                    Loms Studio is an independent video game developer, publisher, and technology provider based in
+                    LOMS Studio is an independent video game developer, publisher, and technology provider based in
                     Ukraine. Loms Studio pushes the boundaries of the possible to make the impossible a reality.
                 </p>
                 <div className="studio__buttons">
-                    <a href="#" className="primary-button">Subscribe</a>
-                    <a href="#" className="secondary-button">Share a link</a>
+                    <a href="#" className="primary-button button">Subscribe</a>
+                    <button className="hero__buttons-share secondary-button button" onClick={()=>{
+                                LinkService.copyLink();
+                                toast.success("Copied")
+                    }}>Share a link</button> 
                 </div>
-            </section> */}
+            </section>
 
             <section className="other">
                 <div className="slider">
@@ -53,8 +58,8 @@ function Games() {
                         
                         
                     </div>
-                    {/* <div className="slider__button-prev"></div>
-                    <div className="slider__button-next slider__button-active"></div> */}
+                    <div className="slider__button slider__button-prev"></div>
+                    <div className="slider__button slider__button-next slider__button-active"></div>
                 </div>
             </section>
         </div>

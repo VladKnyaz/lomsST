@@ -9,6 +9,8 @@ import valandImg from './img/valand.jpg';
 import appstoreImg from './img/appStore.png';
 import steamImg from './img/steam.png';
 import googlePlayImg from './img/googlePlay.png';
+import { LinkService } from '../../services/link.service';
+import { toast } from 'react-toastify';
 
 
 function GameValand() {
@@ -51,7 +53,10 @@ function GameValand() {
                         </div>
                         <div className="hero__buttons">
                             <a href="#" className="hero__buttons-buy primary-button">Buy</a>
-                            <a href="#" className="hero__buttons-share secondary-button">Share a link</a>
+                            <button className="hero__buttons-share secondary-button" onClick={()=>{
+                                LinkService.copyLink();
+                                toast.success("Copied")
+                            }}>Share a link</button> 
                         </div>
                     </div>
                 </div>

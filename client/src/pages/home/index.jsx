@@ -52,7 +52,7 @@ function Home({ isActiveBurger }) {
             </section>
             <section className="advantages__section">
                 <div className="container">
-                    <div className="row">
+                    <div className="row advantages__section-row">
                         <div className="col">
                             <p className="advantages__section__text">
                                 LOMS Studio is an independent video game developer, publisher, and
@@ -72,8 +72,13 @@ function Home({ isActiveBurger }) {
             {/* <Gallery /> */}
             <section className="ushelp__section">
                 <div className="container">
-                    <div className="row">
-                        <div className="col">
+                    <div className="row helpus__row flex-row-reverse">
+                    <div className="col d-md-flex justify-content-center ">
+                            <div className="helpus__img">
+                                <img src={helppersImg} alt="helppers" className="" />
+                            </div>
+                        </div>
+                        <div className="col ushelp__col">
                             <h2 className="ushelp__section__title">We need your support</h2>
                             <p className="ushelp__section__text">
                                 Help the project in development for this, make a donation or become
@@ -94,11 +99,7 @@ function Home({ isActiveBurger }) {
                                 </a>
                             </div>
                         </div>
-                        <div className="col-5 d-md-flex justify-content-center d-none">
-                            <div className="helpus__img">
-                                <img src={helppersImg} alt="helppers" className="" />
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </section>
