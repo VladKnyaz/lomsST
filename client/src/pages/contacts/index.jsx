@@ -25,6 +25,7 @@ const accordionHeader = (name) => {
 
 function  Contacts() {
    
+    
     const GAME_NAME ="LOMS Studio - Roman Conquest: Rise to Power"
     document.title = GAME_NAME
     return (
@@ -62,13 +63,13 @@ function  Contacts() {
 
                         <div className="form__radio-inputs">
                             <div className="form__radio-item">
-                                <input className="form__radio-input" id="catrgory1" type="radio" name="catrgory" id=""
+                                <input className="form__radio-input" id="catrgory1" checked type="radio" name="catrgory"
                                 value="General questions"/>
                                 <label className="form__label" htmlFor="catrgory1">General questions</label>
                             </div>
                             
                             <div className="form__radio-item">
-                                <input className="form__radio-input" id="catrgory2" type="radio" name="catrgory" id=""
+                                <input className="form__radio-input" id="catrgory2" type="radio" name="catrgory"
                                 value="Partnership Questions"/>
                                 <label className="form__label" htmlFor="catrgory2">Partnership Questions</label>
                             </div>
