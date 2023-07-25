@@ -50,6 +50,12 @@ function Games() {
                                 {/* <div className="slider__item-name">Valand</div> */}
                             </div>
                         </Link>
+                        <Link to={''}> 
+                                <div className="slider__item">
+                                <img className="slider__item-image" src={bayraktarImg} alt="Slider image"/>
+                                {/* <div className="slider__item-name">Valand</div> */}
+                            </div>
+                        </Link>
                         <Link to={'/roman-conquest'}> 
                                 <div className="slider__item">
                                 <img className="slider__item-image" src={romanImg} alt="Slider image"/>
@@ -57,12 +63,7 @@ function Games() {
                             </div>
                         </Link>
                         
-                        <Link to={''}> 
-                                <div className="slider__item">
-                                <img className="slider__item-image" src={bayraktarImg} alt="Slider image"/>
-                                {/* <div className="slider__item-name">Valand</div> */}
-                            </div>
-                        </Link>
+                        
                     </div>
                     <div className="slider__button slider__button-prev"></div>
                     <div className="slider__button slider__button-next slider__button-active"></div>

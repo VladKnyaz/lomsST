@@ -11,11 +11,17 @@ import SvgSelector from '../svgSelector';
 function Header({ isActiveBurger, setIsActiveBurger }) {
     function switchBurgerMenu() {
         const body = document.querySelector('body');
-
+        const bg = document.querySelector('.bg_test');
+        body.style.overflow = isActiveBurger ? "" : "hidden";
+        bg.style.display = isActiveBurger ? "none" : "block";
+        bg.style.opacity = isActiveBurger ? "0" : "1";
         setIsActiveBurger((prev) => !prev);
     }
 
     return (
+        <>
+        <div className="bg_test" onClick={switchBurgerMenu}></div>
+
         <header className="header">
             <div className="container header__container">
                 <Link to="/">
@@ -98,6 +104,7 @@ function Header({ isActiveBurger, setIsActiveBurger }) {
                 </div>
             </div>
         </header>
+        </>
     );
 }
 

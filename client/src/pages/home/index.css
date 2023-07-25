@@ -174,7 +174,7 @@
 }
 
 .findus__section__title {
-    margin-top: 4.3rem;
+    margin-top: 2rem;
     font-size: 55px;
     line-height: 58px;
     text-align: center;
@@ -191,6 +191,7 @@
 
 .findus__section__social {
     margin-top: 4rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     gap: 35px;
