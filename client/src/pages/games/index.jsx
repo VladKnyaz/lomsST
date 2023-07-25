@@ -8,6 +8,7 @@ import './index.css';
 import fakeImg from "./img/slider-image.jpg";
 import romanImg from "./img/roman.svg";
 import valandImg from "./img/valand.jpg";
+import bayraktarImg from "./img/bayraktar.svg";
 import lomsImg from "./img/loms-studio.png";
 import { LinkService } from '../../services/link.service';
 import { toast } from 'react-toastify';
@@ -56,7 +57,12 @@ function Games() {
                             </div>
                         </Link>
                         
-                        
+                        <Link to={''}> 
+                                <div className="slider__item">
+                                <img className="slider__item-image" src={bayraktarImg} alt="Slider image"/>
+                                {/* <div className="slider__item-name">Valand</div> */}
+                            </div>
+                        </Link>
                     </div>
                     <div className="slider__button slider__button-prev"></div>
                     <div className="slider__button slider__button-next slider__button-active"></div>
