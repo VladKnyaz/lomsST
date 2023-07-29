@@ -41,7 +41,7 @@ function GameRomanConquest() {
                             </ul>
                         </div>
                         <div className="hero__buttons">
-                            <a href="#" className="hero__buttons-buy primary-button">Buy</a>
+                            <a href="https://store.steampowered.com/app/2425260/" target="_blank" className="hero__buttons-buy primary-button">Buy</a>
                             <button className="hero__buttons-share secondary-button" onClick={()=>{
                                 LinkService.copyLink();
                                 toast.success("Copied")

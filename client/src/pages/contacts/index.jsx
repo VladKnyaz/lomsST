@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 
@@ -12,6 +12,7 @@ import './index.css';
 import { LinkService } from '../../services/link.service';
 import { toast } from 'react-toastify';
 import contactRobot from './img/contact-us-image.png'
+import { MailService } from '../../api/services/mailService';
 
 const accordionHeader = (name) => {
     return (
@@ -24,7 +25,25 @@ const accordionHeader = (name) => {
 }
 
 function  Contacts() {
-   
+    const form = useRef();
+    // const [checkedForm, setChecked] = useState(true);
+    const mailSend = (e)=> {
+        e.preventDefault();
+        if (!form.current.user_name.value || !form.current.user_email.value || !form.current.user_text.value) {
+            toast.warn('Fields should not be empty');
+            return;
+        }
+
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        if (!re.test(form.current.user_email.value) ) {
+            toast.warn('Email incorrect');
+            return;
+        }
+
+        MailService.sendMail(form);
+       
+    }
     
     const GAME_NAME ="LOMS Studio - Roman Conquest: Rise to Power"
     document.title = GAME_NAME
@@ -56,15 +75,16 @@ function  Contacts() {
             <div className="main__row">
                 <div className="form main__form">
                     <h3 className="title form__form-title">Ask a Question</h3>
-                    <form className="form__body" action="">
-                        <input className="form__input" type="text" name="" id="" placeholder="Your name"/>
-                        <input className="form__input" type="text" name="" id="" placeholder="Email"/>
-                        <textarea className="form__input-text-area" name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
+                    <form className="form__body" onSubmit={mailSend} ref={form}>
+                        <input className="form__input" type="text" name="user_name" id="" placeholder="Your name"/>
+                        <input className="form__input" type="mail"  required name="user_email" id="" placeholder="Email"/>
+                        <textarea className="form__input-text-area" name="user_text" id="" cols="30" rows="10" placeholder="Text"></textarea>
 
                         <div className="form__radio-inputs">
                             <div className="form__radio-item">
-                                <input className="form__radio-input" id="catrgory1" checked type="radio" name="catrgory"
-                                value="General questions"/>
+                                <input className="form__radio-input" id="catrgory1" defaultChecked type="radio" name="catrgory"
+
+                                value="General questions"/> 
                                 <label className="form__label" htmlFor="catrgory1">General questions</label>
                             </div>
                             
@@ -99,19 +119,22 @@ function  Contacts() {
                         </div>
                     </div>
                     <Accordion className="accordion" id="my-accordion">
-                        <AccordionItem  header={accordionHeader("What to do if the game crashes?")} className="accordion__section">
+                        <AccordionItem  header={accordionHeader("On which platforms are LOMS Studio products available?")} className="accordion__section">
                             <div className="accordion__section-text">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, commodi, voluptas tempore ab tempora quis eos quidem impedit illo aspernatur itaque quas nam id facere quae! Praesentium mollitia possimus at.
-                                </div>
+                                We create games for mobile devices and PC. You can buy and download them in Steam, AppStore and Play Market.
+                            </div>
                         </AccordionItem>
 
-                        <AccordionItem  header={accordionHeader("What to do if the game crashes?")} className="accordion__section">
+                        <AccordionItem  header={accordionHeader("How to contact support?")} className="accordion__section">
                         <div className="accordion__section-text">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, commodi, voluptas tempore ab tempora quis eos quidem impedit illo aspernatur itaque quas nam id facere quae! Praesentium mollitia possimus at.
-                                </div>
+                        <p>Send your appeals and suggestions for cooperation to: <strong>support@loms-studio.com</strong> </p>
+                        <p className='mt-4'>Join our Discord chats to chat with the development team and share your experiences.</p>
+                        <p className='mt-4'> We will give feedback as soon as possible :) </p>
+                 
+                        </div>
                         </AccordionItem>
 
-                        <AccordionItem header={accordionHeader("What to do if the game crashes?")} className="accordion__section" > 
+                        <AccordionItem header={accordionHeader("Will the price of the game increase after the end of early access?")} className="accordion__section" > 
                                 <div className="accordion__section-text">
                                 If windows 10 does not launch games, then the necessary software may not be installed for them. <br />  DirectX - already installed in the system, updated via Windows Update; .NET Framework - already installed, but not always updated correctly; Visual C++ - download required.
                                 </div>
@@ -119,7 +142,13 @@ function  Contacts() {
 
                         <AccordionItem header={accordionHeader("What to do if the game crashes?")} className="accordion__section" > 
                                 <div className="accordion__section-text">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, commodi, voluptas tempore ab tempora quis eos quidem impedit illo aspernatur itaque quas nam id facere quae! Praesentium mollitia possimus at.
+                                    No, we never increase the price of our products after the official release. So just enjoy :)
+                                </div>
+                        </AccordionItem>
+                        
+                        <AccordionItem header={accordionHeader(`Planning to add seasonal events and battle passes to your products?`)} className="accordion__section" > 
+                                <div className="accordion__section-text">
+                                    We are adding seasonal events to our games, but no battle passes yet.
                                 </div>
                         </AccordionItem>
                     </Accordion>

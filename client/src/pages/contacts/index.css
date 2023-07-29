@@ -50,7 +50,8 @@
 	outline: none;
 	border-radius: 54px;
 	border: 1.5px solid #797979;
-	color: #535353;
+	/* color: #535353; */
+	color: #ebebeb;
 	
 	font-size: 18px;
 	font-style: normal;
@@ -71,6 +72,7 @@
 	border-radius: 30px;
 	border: 1.5px solid #797979;
 	color: #535353;
+	color: #fff;
 	
 	font-size: 18px;
 	font-style: normal;
@@ -129,6 +131,9 @@
 
 }
 
+/* <div className="contactsPage"> */
+
+
 .form__agree {
 	max-width: 378px;
 	color: #7A7A7A;
@@ -139,109 +144,6 @@
 	font-weight: 400;
 	line-height: normal;
 }
-
-/* form end */
-
-/* titles start */
-.def-title{
-	color: #FFF;
-	
-	font-size: 65px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
-}
-/* titles end */
-
-/* header start */
-.header {
-	border-bottom: 1px solid #4D4D4D;
-	font-size: 18px;
-}
-
-.container {
-	max-width: 1336px;
-	padding: 0 15px;
-	margin: 0 auto;
-}
-
-.header-wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.header__left {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.header__logo {
-	margin-right: 51px;
-	width: 108px;
-	height: 35px;
-}
-
-.header__menu-list {
-	display: flex;
-}
-
-.header__menu-list-item {
-	margin-left: 60px;
-}
-
-.header__menu-list-item:first-child{
-	margin-left: 0;
-}
-
-.header__menu-link {
-	color: #E4E4E4;
-	
-	font-size: 18px;
-	line-height: 2;
-}
-
-.burger{
-	display: none;
-}
-
-.header__right {
-	display: flex;
-	align-items: center;
-}
-
-.search {
-	width: 75px;
-	height: 75px;
-	padding: 25px;
-	border-left: 1px solid #4D4D4D;
-}
-
-.language {
-	margin-right: 25px;
-	padding: 25px 18px;
-	border-left: 1px solid #4D4D4D;
-	border-right: 1px solid #4D4D4D;
-}
-
-.language__selected {
-	display: block;
-	padding-left: 34px;
-	background-image: url('./img/browse.svg');
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-
-.header__btn .primary-button{
-	padding-right: 68px;
-	padding-left: 40px;
-	background-image: url('./img/arrow-right.svg');
-	background-repeat: no-repeat;
-	background-position: left 163px bottom 14px;
-}
-/* header end */
-
 
 
 /* hero start */
@@ -317,10 +219,10 @@
 	width: 580px;
 }
 
-.contact-us__info::before{
+.contactsPage__container::before{
 	content: '';
 	position: absolute;
-	display: block;
+	display: block;	
 	width: 189px;
 	height: 189px;
 	border-radius: 100%;
@@ -448,7 +350,9 @@
 .accordion__section-title {
 	position: relative; 
 	color: #B6B6B6;
-	
+	text-align: start;
+	white-space: pre-wrap;
+
 	font-size: 25px;
 	font-style: normal;
 	font-weight: 400;

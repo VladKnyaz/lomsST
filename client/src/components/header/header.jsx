@@ -24,7 +24,7 @@ function Header({ isActiveBurger, setIsActiveBurger }) {
 
         <header className="header">
             <div className="container header__container">
-                <Link to="/">
+                <Link to="/" className='logo_link'>
                     <img src={logoico} alt="logo" />
                 </Link>
                 <nav className="header__nav">

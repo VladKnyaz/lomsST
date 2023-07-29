@@ -7,6 +7,7 @@ import path from 'path';
 
 import { adminApi } from './admin.js';
 import { userApi } from './user.js';
+import { mailApi } from './mail.js';
 
 const app = express();
 const port = 5000;
@@ -16,7 +17,7 @@ app.use(cookiePars());
 app.use(
     cors({
         credentials: true,
-        origin: ['http://localhost:3000', 'https://loms-studio.com', 'https://www.loms-studio.com'],
+        origin: ['http://localhost:3000', 'https://loms-studio.com'],
     }),
 );
 // app.use(express.cookie)
@@ -24,16 +25,21 @@ app.use(
 app.use('/api/admin', adminApi);
 
 app.use('/api/user', userApi);
+app.use('/api/mail', mailApi);
+app.get('/', (res, req) => {
+    res.send("куку")
+});
 
 const __dirname = path.resolve();
 const httpsOptions = {
-    cert: fs.readFileSync(path.join(__dirname, 'cert-generator/certs', 'server.crt')),
-    key: fs.readFileSync(path.join(__dirname, 'cert-generator/certs', 'server.key')),
+    key: fs.readFileSync('/etc/letsencrypt/live/loms-studio.com/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/loms-studio.com/fullchain.pem'),
+    ca: fs.readFileSync('/etc/letsencrypt/live/loms-studio.com/chain.pem'),
 };
-
 // https.createServer(httpsOptions, app).listen(port, () => {
 //     console.log('start serv', port);
 // });
+
 app.listen(port, () => {
     console.log('start serv', port);
 });

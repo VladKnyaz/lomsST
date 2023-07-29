@@ -1,6 +1,7 @@
 import TokenService from './../../services/tokenService.js';
 
 function checkAdmin(req, res, next) {
+    console.log(req.headers);
     if (!req.cookies.token) {
         res.status(403).json({ message: 'Авторизуйтесь' });
         return;

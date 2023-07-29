@@ -8,7 +8,8 @@ import { SECRET_KEY } from '../index.js';
 let userApi = express.Router();
 
 userApi.post('/login', async (req, res) => {
-    res.status(503);
+    // res.status(504).json({ msg: 'err' });
+    // return;
     let candidate = await Admins.findOne({
         where: {
             login: req.body.login,
@@ -35,8 +36,7 @@ userApi.post('/login', async (req, res) => {
     candidate.save();
 });
 
-userApi.get('/game/:id', async (req, res) => {
-    console.log(req.params);
+userApi.post('/login', async (req, res) => {
     let candidate = await Admins.findOne({
         where: {
             login: req.body.login,

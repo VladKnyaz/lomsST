@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 
 const sequelize = new Sequelize('loms', 'root', 'cAfXUqWWWK', {
-    host: 'loms-studio.com',
+    host: 'localhost',
     dialect: 'mysql',
 });
 

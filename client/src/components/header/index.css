@@ -1,14 +1,13 @@
 /* HEADER */
 .header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    border-bottom: 1px solid #4D4D4D;
+
 }
 
 .header__container {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-bottom: 20px;
 
 }
 
@@ -122,6 +121,10 @@
 }
 
 /* EXIT HEADER */
+
+.logo_link {
+    margin: 20px 0;
+}
 
 .bg_test {
     transition: 0.5s ease-in-out;
