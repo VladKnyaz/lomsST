@@ -26,8 +26,8 @@ app.use('/api/admin', adminApi);
 
 app.use('/api/user', userApi);
 app.use('/api/mail', mailApi);
-app.get('/', (res, req) => {
-    res.send("куку")
+app.get('/', (req, res) => {
+    res.send("Who are you? I didn't call you. Go fuck yourself");
 });
 
 const __dirname = path.resolve();
