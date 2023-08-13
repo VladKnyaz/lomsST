@@ -14,10 +14,11 @@ import { toast } from 'react-toastify';
 import contactRobot from './img/contact-us-image.png'
 import { MailService } from '../../api/services/mailService';
 
-const accordionHeader = (name) => {
+const accordionHeader = (name, state) => {
+
     return (
         <div className="accordion__section-title">{name}
-            <svg className="accordion__section-arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className={`accordion__section-arrow ${state.isEnter ? 'active': ''}`} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.6665 6.66667L20.9031 15.6237C21.1308 15.8229 21.1308 16.1771 20.9031 16.3763L10.6665 25.3333" stroke="#DE4C5E" strokeWidth="2" strokeLinecap="round"/>
             </svg>
         </div>
@@ -58,8 +59,8 @@ function  Contacts() {
                     <p className="contact-us__text">Do you have any questions for us, that's great, we'll answer them
                     </p>
                     <div className="contact-us__buttons">
-                        <a className="button primary-button" href="#">General questions</a>
-                        <a className="button secondary-button" href="#">Partnership Questions</a>
+                        <a className="button primary-button" href="#contacts_main">General questions</a>
+                        <a className="button secondary-button" href="#contacts_main">Partnership Questions</a>
                     </div>
                 </div>
 
@@ -72,8 +73,8 @@ function  Contacts() {
 
     <section className="main">
         <div className="container">
-            <div className="main__row">
-                <div className="form main__form">
+            <div className="main__row" id="contacts_main">
+            <div className="form main__form">
                     <h3 className="title form__form-title">Ask a Question</h3>
                     <form className="form__body" onSubmit={mailSend} ref={form}>
                         <input className="form__input" type="text" name="user_name" id="" placeholder="Your name"/>
@@ -118,14 +119,14 @@ function  Contacts() {
                             
                         </div>
                     </div>
-                    <Accordion className="accordion" id="my-accordion">
-                        <AccordionItem  header={accordionHeader("On which platforms are LOMS Studio products available?")} className="accordion__section">
+                    <Accordion className="accordion" id="my-accordion" transition transitionTimeout={250} >
+                        <AccordionItem header={({state}) => accordionHeader("On which platforms our products available?", state)} className="accordion__section">
                             <div className="accordion__section-text">
                                 We create games for mobile devices and PC. You can buy and download them in Steam, AppStore and Play Market.
                             </div>
                         </AccordionItem>
 
-                        <AccordionItem  header={accordionHeader("How to contact support?")} className="accordion__section">
+                        <AccordionItem header={({state}) => accordionHeader("How to contact support?", state)} className="accordion__section">
                         <div className="accordion__section-text">
                         <p>Send your appeals and suggestions for cooperation to: <strong>support@loms-studio.com</strong> </p>
                         <p className='mt-4'>Join our Discord chats to chat with the development team and share your experiences.</p>
@@ -134,19 +135,13 @@ function  Contacts() {
                         </div>
                         </AccordionItem>
 
-                        <AccordionItem header={accordionHeader("Will the price of the game increase after the end of early access?")} className="accordion__section" > 
+                        <AccordionItem header={({state}) => accordionHeader("Will the price of the game increase after the end of early access?", state)} className="accordion__section" > 
                                 <div className="accordion__section-text">
-                                If windows 10 does not launch games, then the necessary software may not be installed for them. <br />  DirectX - already installed in the system, updated via Windows Update; .NET Framework - already installed, but not always updated correctly; Visual C++ - download required.
+                                No, we never increase the price of our products after the official release. So just enjoy :)
                                 </div>
                         </AccordionItem>
 
-                        <AccordionItem header={accordionHeader("What to do if the game crashes?")} className="accordion__section" > 
-                                <div className="accordion__section-text">
-                                    No, we never increase the price of our products after the official release. So just enjoy :)
-                                </div>
-                        </AccordionItem>
-                        
-                        <AccordionItem header={accordionHeader(`Planning to add seasonal events and battle passes to your products?`)} className="accordion__section" > 
+                        <AccordionItem  header={({state}) => accordionHeader(`Planning to add seasonal events and battle passes to your products?`, state)} className="accordion__section" > 
                                 <div className="accordion__section-text">
                                     We are adding seasonal events to our games, but no battle passes yet.
                                 </div>

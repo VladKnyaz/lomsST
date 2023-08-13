@@ -40,8 +40,8 @@ function Header({ isActiveBurger, setIsActiveBurger }) {
                             </Link>
                         </li>
                         <li className="menu__item">
-                            <Link to="/" className="menu__link">
-                                Partner
+                            <Link to="/contacts" className="menu__link">
+                                Partners
                             </Link>
                         </li>
                         <li className="menu__item">

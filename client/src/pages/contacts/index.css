@@ -1,4 +1,7 @@
 
+.szh-accordion__item-content {
+	transition: height 0.25s cubic-bezier(.17,.67,.85,.91);
+}
 
 .primary-button{
 	background-color: var(--primary-btn-color);
@@ -29,7 +32,7 @@
 
 /* titles end */
 
-/* form start */
+/* form start */ 
 
 .form {
 	max-width: 418px;
@@ -282,7 +285,7 @@
 }
 
 .main-info__email {
-	margin-bottom: 39px;
+	/* margin-bottom: 39px; */
 }
 
 .main-info__email-title {
@@ -305,7 +308,7 @@
 }
 
 .main-info__faq {
-	margin-bottom: 41px;
+	/* margin-bottom: 41px; */
 	display: flex;
 	align-items: center;
 	column-gap: 53px;
@@ -365,6 +368,18 @@
 	top: 50%;
     transform: translateY(-50%);
 } */
+
+.accordion__section-arrow, .accordion__section-arrow path {
+	transition: 0.2s ease-in;
+	min-width: 32px;
+}
+.accordion__section-arrow.active {
+	transform: rotate(90deg);
+}
+.accordion__section-arrow.active path {
+	stroke: #C5C5C5;
+}
+
 
 .accordion__section-text {
 	margin-top: 30px;
@@ -543,6 +558,7 @@
 	}
 
 	.form__label{
+		white-space: nowrap;
 		padding-left: 24px;
 		font-size: 14px;
 	}

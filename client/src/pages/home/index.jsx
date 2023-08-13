@@ -18,6 +18,7 @@ import youtubeIco from '../../assets/icons/youtube.svg';
 import Subscribe from './components/subscribe/index';
 // lang set
 import words from './../../services/langService';
+import { Link } from 'react-router-dom';
 
 function Home({ isActiveBurger }) {
     document.title = 'LOMS Studio - Game Developer';
@@ -31,17 +32,17 @@ function Home({ isActiveBurger }) {
                             <p className='start__section__text'>{words().mainText}</p>
                             <div className='start__section__buttons'>
                                 <a
-                                    href='/'
+                                    href='/contacts#contacts_main'
                                     className='start__section__button button--primary button'
                                 >
                                     Start with us
                                 </a>
-                                <a
-                                    href='/'
+                                <Link
+                                    to='/contacts#contacts_main'
                                     className='start__section__button button--secondory button'
                                 >
                                     Become a partner
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className='col-5 start__img'>
@@ -91,12 +92,12 @@ function Home({ isActiveBurger }) {
                                 >
                                     Send
                                 </a>
-                                <a
-                                    href='/'
+                                <Link
+                                    to='/contacts'
                                     className='ushelp__section__button button--secondory button'
                                 >
                                     Become a partner
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
